@@ -13,7 +13,7 @@ namespace PSO_original_CSharp
     public partial class Form1 : Form
     {
         private const int n_particles = 30;
-        private const int n_iterations = 50;
+        private const int n_iterations = 10;
         private const double W = 0.5;
         private const double c1 = 0.8;
         private const double c2 = 0.9;
@@ -94,7 +94,8 @@ namespace PSO_original_CSharp
                 float newVelocityY = inertiaY + selfConfidenceY + swarmConfidenceY;
 
                 particle.Velocity = new PointF(newVelocityX, newVelocityY);
-                particle.Position = new PointF(particle.Position.X + particle.Velocity.X, particle.Position.Y + particle.Velocity.Y);
+                
+                //particle.Position = new PointF(particle.Position.X + particle.Velocity.X, particle.Position.Y + particle.Velocity.Y);
                 particle.Update();
             }
         }
